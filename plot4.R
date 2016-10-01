@@ -13,8 +13,7 @@ df$Date<- as.Date(df$Date, "%d/%m/%Y")
 png(file="./plots/plot4.png", width = 480, height = 480)
 par(mfcol=c(2,2))
 ### First Plot
-hist(df$Global_active_power, 
-     main = "Global Active Power", xlab="Global Active Power", col="Red")
+plot(df$Time, df$Global_active_power,type = "l",xlab="",ylab="Global Active Power")
 
 ### Second Plot
 plot(df$Time, df$Sub_metering_1,type = "n", xlab = "",
